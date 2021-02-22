@@ -11,7 +11,7 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 import { Icon, LatLng } from "leaflet";
 
 import * as L from "leaflet";
-import "../../../../index";
+import "../../../..";
 
 import "leaflet/dist/leaflet.css";
 Vue.component("l-map", LMap);
@@ -31,7 +31,7 @@ export default class HelloWorld extends Vue {
     const MAPTILE_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
     const API_KEY = "MY_DEMO_API_KEY";
 
-    const layer = L.TileLayer(
+    const layer = L.TileLayer.header(
       MAPTILE_URL,
       {
         attribution:
@@ -41,7 +41,7 @@ export default class HelloWorld extends Vue {
       null
     );
 
-    // layer.addTo(this.$refs.myMap.mapObject);
+    layer.addTo(this.$refs.myMap.mapObject);
   }
 }
 </script>

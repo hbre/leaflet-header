@@ -1,5 +1,7 @@
 "use strict";
 
+import * as L from "leaflet";
+
 async function fetchImage(url, callback, headers, abort) {
   const _headers = {};
   if (headers) {
