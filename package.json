@@ -1,26 +1,25 @@
 {
-  "name": "leaflet-wms-header",
+  "name": "leaflet-header",
   "version": "1.0.8",
   "description": "Custom headers on Leaflet TileLayer WMS",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ticinum-aerospace/leaflet-wms-header"
+    "url": "https://github.com/hbre/leaflet-header"
   },
   "keywords": [
     "leaflet",
     "headers",
     "tilelayer",
-    "wms",
     "plugin",
     "typescript",
     "types"
   ],
-  "author": "Ticinum Aerospace",
+  "author": "hbre, jaq316, Ticinum Aerospace",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^6.5.3",
+    "rxjs": "^6.6.3",
     "typescript": "^2.9.2"
   }
 }
