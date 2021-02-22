@@ -5,15 +5,15 @@ declare module 'leaflet' {
     namespace TileLayer {
         export class TileLayerWithHeaders extends TileLayer {
             constructor(
-                baseUrl: string,
-                // options: WMSOptions,
+                baseUrl: string,                 
+                options?: TileLayerOptions,
                 header: { header: string; value: string }[],
                 abort?: Observable<any>
             );
         }
-        export function header(
+        export function header (
             baseUrl: string,
-            // options: WMSOptions,
+            options?: TileLayerOptions,
             header: { header: string; value: string }[],
             abort?: Observable<any>
         ): L.TileLayer.TileLayerWithHeaders;

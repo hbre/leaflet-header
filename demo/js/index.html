@@ -16,21 +16,25 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/2.5.3/rx.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs-dom/7.0.3/rx.dom.min.js"></script>
-    <script src="../index.js"></script>
+    <script src="../../index.js"></script>
     <script>
-      var mymap = L.map("mapid").setView([52.2, 8.56], 19);
+      var mymap = L.map("mapid").setView(
+        [Math.random() * 60, Math.random() * 12],
+        5
+      );
       var abortButton = document.getElementById("abort");
       var cl = Rx.DOM.click(abortButton);
-      L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          attribution:
-            'Kartendaten &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende',
-          useCache: true,
-        },
-        [{ header: "key", value: "MY_DEMO_API_KEY" }],
-        cl
-      ).addTo(mymap);
+      L.tileLayer
+        .header(
+          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          {
+            attribution:
+              'Kartendaten &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Mitwirkende',
+          },
+          [{ header: "key", value: "MY_DEMO_API_KEY" }],
+          cl
+        )
+        .addTo(mymap);
     </script>
   </body>
 </html>

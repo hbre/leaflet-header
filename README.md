@@ -7,7 +7,7 @@ It works with javascript and typescript without any dependencies!
 
 Based on https://github.com/Leaflet/Leaflet/issues/2091#issuecomment-302706529.
 
-Based on https://github.com/jaq216/leaflet-header but finished making package
+Based on https://github.com/jaq316/leaflet-header but finished making package
 
 ### Javascript
 
