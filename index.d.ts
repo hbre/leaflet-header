@@ -3,7 +3,7 @@ import {Observable} from 'rxjs';
 
 declare module 'leaflet' {
     namespace TileLayer {
-        export class TitleLayerHeader extends TileLayer {
+        export class TileLayerWithHeaders extends TileLayer {
             constructor(
                 baseUrl: string,
                 // options: WMSOptions,
@@ -16,6 +16,6 @@ declare module 'leaflet' {
             // options: WMSOptions,
             header: { header: string; value: string }[],
             abort?: Observable<any>
-        ): L.TileLayer.Header;
+        ): L.TileLayer.TileLayerWithHeaders;
     }
 }
