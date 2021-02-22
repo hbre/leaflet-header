@@ -9,7 +9,9 @@
 import { LMap, LTileLayer } from "vue2-leaflet";
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { Icon, LatLng } from "leaflet";
+
 import * as L from "leaflet";
+import "../../../../index";
 
 import "leaflet/dist/leaflet.css";
 Vue.component("l-map", LMap);
@@ -39,7 +41,7 @@ export default class HelloWorld extends Vue {
       null
     );
 
-    layer.addTo(this.$refs.myMap.mapObject);
+    // layer.addTo(this.$refs.myMap.mapObject);
   }
 }
 </script>
